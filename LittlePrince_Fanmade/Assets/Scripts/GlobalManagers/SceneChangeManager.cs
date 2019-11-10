@@ -49,9 +49,22 @@ public class SceneChangeManager : MonoBehaviour
         SceneManager.LoadScene("SettingScene");
     }
 
-    public void GameScene()
+    public void CurrentGameScene()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene(DataManager.Instance.getCurrentGameScene());
+    }
+
+    public void FlyingGameScene()
+    {
+        if (DataManager.Instance.getCurrentGameScene().Equals("EarthScene"))
+        {
+            DataManager.Instance.nextCurrentGameScene();
+            CurrentGameScene();
+        }
+        else
+        {
+            SceneManager.LoadScene("FlyingGameScene");
+        }
     }
 
     public void MiniGameScene()

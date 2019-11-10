@@ -17,10 +17,7 @@ public class MainSceneManager : MonoBehaviour
 #if UNITY_EDITOR
         if ((Input.GetMouseButtonDown(0)))  //버튼을 누름.
         {
-            if (EventSystem.current.IsPointerOverGameObject() == false)
-            {
-                SceneChangeManager.Instance.GameScene();
-            }
+            SceneChangeManager.Instance.CurrentGameScene();
         }
 #endif
 #if UNITY_ANDROID
@@ -28,14 +25,11 @@ public class MainSceneManager : MonoBehaviour
         {    //터치가 1개 이상이면.
             for (int i = 0; i < Input.touchCount; i++)
             {
-                if (EventSystem.current.IsPointerOverGameObject(i) == false)
+                Touch touch = Input.GetTouch(i);
+                if (touch.phase == TouchPhase.Began)
                 {
-                    Touch touch = Input.GetTouch(i);
-                    if (touch.phase == TouchPhase.Began)
-                    {
-                        SceneChangeManager.Instance.GameScene();
-                        break;
-                    }
+                    SceneChangeManager.Instance.CurrentGameScene();
+                    break;
                 }
             }
         }

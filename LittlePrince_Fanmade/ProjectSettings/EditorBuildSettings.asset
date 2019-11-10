@@ -15,9 +15,30 @@ EditorBuildSettings:
     path: Assets/Scenes/SettingScene.unity
     guid: 801b2772c5b15a8489564db1cfbae79e
   - enabled: 1
-    path: Assets/Scenes/GameScene.unity
+    path: Assets/Scenes/EarthScene.unity
+    guid: 662c16498a9a9ae40a272df1095a8564
+  - enabled: 1
+    path: Assets/Scenes/GeographerScene.unity
     guid: c3f9de1184e83dc4db25753da80b029b
   - enabled: 1
-    path: Assets/Scenes/MiniGameScene.unity
+    path: Assets/Scenes/FlyingGameScene.unity
     guid: 4cc677a180b336144abe84f96dbae269
+  - enabled: 1
+    path: Assets/Scenes/DrunkardScene.unity
+    guid: cfe437cbff47a174aba3152d08c218f8
+  - enabled: 1
+    path: Assets/Scenes/BusinessmanScene.unity
+    guid: 2424479fa78dd124e80ed5181443911a
+  - enabled: 1
+    path: Assets/Scenes/KingScene.unity
+    guid: 57883a67ebf35c74f99de2dc57eb658e
+  - enabled: 1
+    path: Assets/Scenes/StreetLampScene.unity
+    guid: bff4a916ea4e31149879d0d99551fea7
+  - enabled: 1
+    path: Assets/Scenes/VainmanScene.unity
+    guid: 67038ea706295f944a7e431b01df59cf
+  - enabled: 1
+    path: Assets/Scenes/B612Scene.unity
+    guid: 9f52ce38e49a50a43b56eb78989a1892
   m_configObjects: {}

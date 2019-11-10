@@ -22,7 +22,7 @@ public class StartSceneManager : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if(timer > 5)
+        if(timer > 1)
         {
             SceneChangeManager.Instance.MainScene();
         }
