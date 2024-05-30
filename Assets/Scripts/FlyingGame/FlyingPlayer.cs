@@ -24,12 +24,10 @@ public class FlyingPlayer : MonoBehaviour
 
     void Jump()
     {
-#if UNITY_EDITOR
         if ((Input.GetMouseButtonDown(0)))  //버튼을 누름.
         {
             rb.velocity = new Vector3(0, jumpPower, 0);
         }
-#endif
 #if UNITY_ANDROID
         if (Input.touchCount > 0)
         {    //터치가 1개 이상이면.

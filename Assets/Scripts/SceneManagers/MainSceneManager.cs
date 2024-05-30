@@ -14,12 +14,10 @@ public class MainSceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-#if UNITY_EDITOR
         if ((Input.GetMouseButtonDown(0)))  //버튼을 누름.
         {
             SceneChangeManager.Instance.CurrentGameScene();
         }
-#endif
 #if UNITY_ANDROID
         if (Input.touchCount > 0)
         {    //터치가 1개 이상이면.

@@ -66,7 +66,6 @@ public class StoryLoader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-#if UNITY_EDITOR
         if ((!stopLoading && Input.GetMouseButtonDown(0)))  //버튼을 누름.
         {
             if (isChainingDone)
@@ -82,7 +81,6 @@ public class StoryLoader : MonoBehaviour
                 StoryText.text = chainingString;
             }
         }
-#endif
 #if UNITY_ANDROID
         if (!stopLoading && Input.touchCount > 0)
         {    //터치가 1개 이상이면.
@@ -146,7 +144,6 @@ public class StoryLoader : MonoBehaviour
                 if (tmp.StartsWith("2>"))
                 {
                     storyIndex = story.Count;
-                    return;
                 }
             }
             else
